@@ -1,0 +1,16 @@
+- name: Watch for new records
+  hosts: localhost
+  sources:
+    - servicenow.itsm.records:
+        instance:
+          hostname: "{{ snow_host | default(omit) }}"
+          username: "{{ snow_username | default(omit) }}"
+          password: "{{ snow_password | default(omit) }}"
+          timeout: 60
+        table: incident
+        interval: 1
+  rules:
+    - name: New record created
+      condition: event.sys_id is defined
+      action:
+        debug:
