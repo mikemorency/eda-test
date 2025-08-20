@@ -3,7 +3,7 @@
   sources:
     - servicenow.itsm.records:
         instance:
-          hostname: "{{ snow_host | default(omit) }}"
+          host: "{{ snow_host | default(omit) }}"
           username: "{{ snow_username | default(omit) }}"
           password: "{{ snow_password | default(omit) }}"
           timeout: 60

@@ -2,3 +2,4 @@ collections:
   - name: https://github.com/mikemorency/servicenow.itsm.git
     type: git
     version: "feature/eda-event-source"
+  - name: ansible.eda
