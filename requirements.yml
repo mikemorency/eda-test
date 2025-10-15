@@ -1,5 +1,5 @@
 collections:
   - name: https://github.com/mikemorency/servicenow.itsm.git
     type: git
-    version: "feature/eda-event-source"
+    version: "bugfix/eda"
   - name: ansible.eda
